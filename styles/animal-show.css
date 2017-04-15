@@ -1,0 +1,16 @@
+ol, ul{
+    /*消除点*/
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+#dynamic li{
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #AAA;
+}
+#message li{
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #AAA;
+}

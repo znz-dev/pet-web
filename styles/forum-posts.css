@@ -1,0 +1,12 @@
+ol, ul{
+    /*消除点*/
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+[class*="col-"]{
+    /*padding-top: 15px;*/
+    /*padding-bottom: 15px;*/
+    border: 1px solid #ddd;
+}

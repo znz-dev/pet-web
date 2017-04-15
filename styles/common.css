@@ -1,0 +1,16 @@
+/*@font-face {*/
+    /*font-family: 'MyFont';   !*字体名称*!*/
+    /*src: url('font/时光体.ttf');       !*字体源文件*!*/
+/*}*/
+
+/*p,a{font-family:MyFont;}*/
+
+/*给bootstrap中所有col添加边框*/
+[class*="col-"]{
+    border: 1px solid #ddd;
+}
+
+/*网格背景*/
+body{
+    background-image: url("../images/pet-bg.png");
+}
