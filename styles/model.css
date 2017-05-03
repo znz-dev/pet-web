@@ -1,0 +1,28 @@
+.header, .title, .animalCenter, .community, .user{
+    float: left;
+    position: absolute;
+}
+.title{
+    border: 0px solid black;
+    margin: 50px 1px 1px 80px;
+    width: 230px;
+    height: 160px;
+}
+.animalCenter{
+    border: 0px solid black;
+    margin: 60px 1px 1px 425px;
+    width: 360px;
+    height: 220px;
+}
+.community{
+    border: 0px solid black;
+    margin: 35px 1px 1px 875px;
+    width: 140px;
+    height: 160px;
+}
+.user{
+    border: 0px solid black;
+    margin: 30px 1px 1px 1085px;
+    width: 125px;
+    height: 65px;
+}

@@ -5,8 +5,26 @@ ol, ul{
     padding: 0;
 }
 
-[class*="col-"]{
-    /*padding-top: 15px;*/
-    /*padding-bottom: 15px;*/
-    border: 1px solid #ddd;
+.post-info{
+    border: 5px solid;
+    background-color: #fff;
 }
+
+.post-info li{
+    border: 5px solid;
+    /* padding: 15px; */
+    margin: 0px -5px;
+}
+
+.post-info li .post-picture{
+    padding: 19px;
+    border-right: 6px solid;
+}
+.post-info li .post-picture img{
+    height: 100px;
+    width: 100px;
+}
+.page .pagination {
+    border: 3px solid;
+}
+

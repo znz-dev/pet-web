@@ -15,3 +15,15 @@
 .header_user{
     padding-top: 20px;
 }
+
+.header_user a img{
+    /*width:200px;*/
+    /*height:200px;*/
+    border-radius:100px;
+}
+
+
+.navbar{
+    border: 7px solid #029395;
+    background-color: rgba(167, 236, 255, 0.57);
+}

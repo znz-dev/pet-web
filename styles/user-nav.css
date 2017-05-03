@@ -1,0 +1,81 @@
+.nav-main ul{
+    border: 10px solid;
+    padding: 10px 25px;
+    background-color: #f5e196;
+}
+
+.nav-main .active{
+    border-bottom: 5px solid #467ad8;
+}
+
+.nav-main .active a{
+    border-radius: 0px;
+    margin: 2px;
+    border: 2px solid #6fc7be;
+}
+
+.nav-follow .triangle-info,.triangle-animal,.triangle-focus,.triangle-message{
+    width: 0;
+    height: 0;
+    margin: -135px 0px 0px -26px;
+    border-top: 10px solid transparent;
+    border-left: 20px solid #4d7282;
+    border-bottom: 10px solid transparent;
+}
+
+/*.nav-follow .triangle-info{*/
+    /*margin: -120px 0px 0px -26px;*/
+/*}*/
+/*.nav-follow .triangle-focus{*/
+    /*margin: -77px 0px 0px -26px;*/
+/*}*/
+/*.nav-follow .triangle-message{*/
+    /*margin: -35px 0px 0px -26px;*/
+/*}*/
+/*.nav-follow .triangle-animal{*/
+    /*margin: -135px 0px 0px -26px;*/
+/*}*/
+
+
+.nav-follow ul{
+    border: 4px solid;
+    background-color: #d6d6d6;
+    padding: 10px;
+}
+
+.nav-follow ul .active{
+    border-left: 3px solid #59829e;
+    border-right: 3px solid #59829e;
+}
+
+.nav-follow .active a{
+    margin: 0px;
+}
+
+.nav-follow #animals ul{
+    margin-top: 150px;
+}
+.nav-follow #message ul{
+    margin-top: 100px;
+}
+.nav-follow #focus ul{
+    margin-top: 60px;
+}
+.nav-follow #info ul{
+    margin-top: 0px;
+}
+
+.vertical-line{
+    height: 580px;
+    width: 5px;
+    background-color: black;
+    margin: -20px 0px;
+}
+
+.nav-info .content{
+    height: 550px;
+    margin-left: -80px;
+    border: 4px solid;
+    padding: 40px;
+    background-color: #fcf8e3;
+}

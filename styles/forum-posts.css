@@ -5,8 +5,23 @@ ol, ul{
     padding: 0;
 }
 
-[class*="col-"]{
-    /*padding-top: 15px;*/
-    /*padding-bottom: 15px;*/
-    border: 1px solid #ddd;
+.posts{
+    border: 5px solid;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: azure;
+}
+.posts .post{
+    margin-bottom: 20px;
+    margin-top: 5px;
+    border-bottom: 2px solid;
+}
+
+.page .pagination{
+    background-color: azure;
+    /* padding: 0px; */
+    margin-top: -5px;
+    border-left: 5px solid;
+    border-right: 5px solid;
+    border-bottom: 5px solid;
 }

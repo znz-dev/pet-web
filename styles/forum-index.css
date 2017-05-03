@@ -1,5 +1,21 @@
-[class*="col-"]{
-    /*padding-top: 15px;*/
-    /*padding-bottom: 15px;*/
-    border: 1px solid #ddd;
+.plate{
+    background-color: #eff5b8;
+    margin: 10px 0px;
+}
+
+.plates .plate{
+    border: 10px solid;
+    border-radius: 20px;
+}
+.plates .plate .plate-picture img{
+    height: 100px;
+    width: 100px;
+}
+
+.plates .plate .plate-picture{
+    padding: 10px 10px;
+}
+
+.plates .plate .plate-info{
+    padding: 10px 0px 5px 20px;
 }

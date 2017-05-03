@@ -1,7 +1,7 @@
 select{
     margin-top: 10px;
 }
-.animal-list{
+#animal-list{
     padding-top: 10px;
 }
 .animal{
@@ -10,15 +10,92 @@ select{
 }
 
 .nav-justified>li{
-    border: 1px solid #2a6496;
+    border: 5px solid #50a0d6;
+}
+
+.nav-pills>li>a {
+    border-radius: 0px;
+    font-size: large;
+
+}
+
+.nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus {
+    color: #363636;
+    background-color: #d5d5d5;
 }
 
 .main{
-    margin: 10px;
-    border: 1px solid #000000;
-    padding: 5px;
+    margin: 12px -15px;
+    border: 8px solid #75c675;
+    padding: 7px;
+}
+
+.main hr{
+    margin-top: 2px;
+    margin-bottom: 5px;
+    border: 0;
+    border-top: 9px solid #555;
 }
 
 form{
     margin: 10px;
+}
+
+.animal{
+    border: 5px solid #11b2fd;
+    background-image: url("../images/动物-1.png");
+}
+
+.animal img{
+
+    margin: 10px auto;
+    border: 5px solid rgba(0, 0, 0, 0.51);
+}
+
+.animal span{
+    /*border: 1px solid #424242;*/
+    margin-right: 1px;
+}
+
+.animal p span{
+    position: absolute;
+    right: 15%;
+    /*background-color: #ff857d;*/
+    color: red;
+    font-size: 20px;
+    top: inherit;
+}
+
+.animal p{
+    margin-left: 5px;
+}
+
+.animal_picture{
+    position: relative;
+}
+
+.animal_picture .place{
+    position: absolute;
+    background-color: #f0f0f0;
+    left:0;
+    top: 10%;
+}
+
+.animal_picture .master{
+    position: absolute;
+    background-color: #62f295;
+    right: 0;
+    top: 10%;
+}
+
+#animal-list .animal p{
+    width: 90%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#animal-list .animal a img{
+    height: 210px;
+    width: 210px;
 }

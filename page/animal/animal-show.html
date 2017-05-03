@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+    <link rel="stylesheet" href="/pet-web/styles/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="/pet-web/styles/common.css">
+    <link rel="stylesheet" href="/pet-web/styles/head.css">
+    <link rel="stylesheet" href="/pet-web/styles/animal-show.css">
+</head>
+<body>
+<div class="header"></div>
+<div class="content">
+    <div class="container animal_info">
+        <div class="row">
+            <div class="col-md-5 col-md-offset-1 text-center">
+                <div class="info_left text-center">
+                    <h1>WANTED</h1>
+                    <div class="avatar">
+                        <!--<img src="/pet-web/images/乔巴.png" alt="123">-->
+                    </div>
+                    <div>
+                        <h4>DEAD OR ALIVE</h4>
+                        <h2>CHOPPER</h2>
+                        <h5>50</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="info_right">
+                    <ul class="">
+                        <li class="name">姓名：</li>
+                        <li class="age">年龄：</li>
+                        <li class="gender">性别：</li>
+                        <li class="species">品种：</li>
+                        <li class="healthy">健康状态：</li>
+                        <li class="neutered">绝育：</li>
+                        <li class="vaccinated">免疫：</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-1 info-btn">
+                <a href="#" class="btn btn-default">我要领养</a>
+                &nbsp;
+                <a href="#" class="btn btn-default">联系饲主</a>
+                &nbsp;
+                <a href="#" class="btn btn-default">添加关注</a>
+            </div>
+        </div>
+        <div class="row animal_extend">
+            <ul class="nav nav-tabs row">
+                <li class="active">
+                    <a href="#pictures" data-toggle="tab">
+                        相簿
+                    </a>
+                </li>
+                <li>
+                    <a href="#dynamic" data-toggle="tab">
+                        动态
+                    </a>
+                </li>
+                <li>
+                    <a href="#message" data-toggle="tab">
+                        留言
+                    </a>
+                </li>
+            </ul>
+            <hr>
+            <div class="tab-content row">
+                <div class="tab-pane fade in active row" id="pictures">
+                    <div class="row text-center">
+                        <img src="/pet-web/images/750x750.png" alt="showPicture">
+                    </div>
+                </div>
+                <div class="tab-pane fade row" id="dynamic">
+                    <ul>
+                        <li class="row">
+                            <div class="col-md-2 text-center">
+                                <img class="row" src="/pet-web/images/50x50.png" alt="头像">
+                                <p>用户名</p>
+                            </div>
+                            <div class="col-md-10">
+                                <p class="row">
+                                    猫屎真臭
+                                    猫屎真臭
+                                    猫屎真臭
+                                </p>
+                                <div class="row">
+                                    <img class="" src="/pet-web/images/40x40.png" alt="">
+                                    <img class="" src="/pet-web/images/40x40.png" alt="">
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab-pane fade row" id="message">
+                    <ul>
+                        <li class="row">
+                            <div class="col-md-2 text-center">
+                                <img class="row" src="/pet-web/images/50x50.png" alt="头像">
+                                <p>用户名</p>
+                            </div>
+                            <div class="col-md-10">
+                                <p class="row">
+                                    非常棒非常棒非常棒非常棒非常棒非常棒非常棒非常棒非常棒非常棒非常棒非常棒
+                                    非常棒非常棒非常棒非常棒非常棒非常棒非常棒非常棒非常棒非常棒非常棒非常棒
+                                    非常棒非常棒非常棒非常棒非常棒非常棒非常棒非常棒非常棒非常棒非常棒非常棒
+                                    非常棒非常棒非常棒非常棒非常棒非常棒非常棒非常棒非常棒非常棒非常棒非常棒
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer"></div>
+
+<script src="/pet-web/scripts/lib.js"></script>
+<script src="/pet-web/scripts/common.js"></script>
+<script src="/pet-web/scripts/animal-show.js"></script>
+<script>
+    $(".header").load("../head.html");
+</script>
+</body>
+</html>

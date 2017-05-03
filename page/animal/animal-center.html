@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>动物中心</title>
+    <link rel="stylesheet" href="/pet-web/styles/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="/pet-web/styles/common.css">
+    <link rel="stylesheet" href="/pet-web/styles/head.css">
+    <link rel="stylesheet" href="/pet-web/styles/animal-center.css">
+</head>
+<body>
+<div class="header"></div>
+<div class="content">
+    <div class="container">
+        <div class="row">
+            <ul class="nav nav-pills nav-justified">
+                <li class="active"><a data-toggle="tab" href="#show-animals">查看宠物</a></li>
+                <li><a data-toggle="tab" href="#publication">我要发布</a></li>
+                <li><a data-toggle="tab" href="#service">联系客服</a></li>
+            </ul>
+        </div>
+        <div class="tab-content">
+            <div id="show-animals" class="tab-pane fade in active">
+                <div class="row main">
+                    <ul class="nav nav-tabs" id="adopter">
+                        <li class="active" id="adopter_all"><a data-toggle="tab" href="javascript:void(0)">全部</a></li>
+                        <li  id="not_adopted"><a data-toggle="tab" href="javascript:void(0)">待领养</a></li>
+                        <li  id="adopted"><a data-toggle="tab" href="javascript:void(0)">已被领养</a></li>
+                    </ul>
+                    <hr>
+                    <div class="tab-content">
+                        <div id="All" class="tab-pane fade in active">
+                            <div class="row ">
+                                <div class="col-md-3 animal-species">
+                                    <select class="form-control">
+                                        <option value="all">全部</option>
+                                        <option value="cat">猫</option>
+                                        <option value="dog">狗</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3 animal-gender">
+                                    <select class="form-control">
+                                        <option value="all">全部</option>
+                                        <option value="female">雄性</option>
+                                        <option value="male">雌性</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3 animal-order">
+                                    <select class="form-control">
+                                        <option value="time_asc">按时间升序排序</option>
+                                        <option value="time_desc">按时间降序排序</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row" id="animal-list">
+                                <!--<div class="col-md-3">-->
+                                    <!--<div class="animal">-->
+                                        <!--<div class="animal_picture text-center">-->
+                                            <!--<a href="animal-show.html"><img src="/pet-web/images/200x200.png" alt="样图"/></a>-->
+                                            <!--<span class="place">上海</span>-->
+                                            <!--<span class="master">待领养</span>-->
+                                        <!--</div>-->
+                                        <!--<p>名字：招财猫 &nbsp;<span class="glyphicon glyphicon-heart">110</span></p>-->
+                                        <!--<p>描述：镇店之宝1水水水水水水水水水水水水水水水水水水水水水水水</p>-->
+                                        <!--<p>作者</p>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            </div>
+                            <div class="row">
+                                <div class="good_page col-md-12 text-center">
+                                    <ul class="pagination pagination-lg">
+                                        <!--<li><a href="#">&laquo;</a></li>-->
+                                        <!--<li class="active"><a href="#">1</a></li>-->
+                                        <!--<li><a href="#">2</a></li>-->
+                                        <!--<li><a href="#">3</a></li>-->
+                                        <!--<li><a href="#">4</a></li>-->
+                                        <!--<li><a href="#">5</a></li>-->
+                                        <!--<li><a href="#">&raquo;</a></li>-->
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="publication" class="tab-pane">
+                <form id="publication-form" class="form-horizontal" enctype="multipart/form-data">
+                    <div class="row">
+                        <div class="col-md-4 text-center">
+                            <div class="form-group">
+                                <a href="#">
+                                    <img src="/pet-web/images/210x210.png" alt="添加图片">
+                                </a>
+                                <input type="file" id="inputfile" name="avatar">
+                                <p>上传头像</p>
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="form-group">
+                                <label for="animal-name" class="col-sm-2 control-label">名字</label>
+                                <div class="col-sm-10">
+                                    <input type="text" id="animal-name" name="name" class="form-control" placeholder="请填写动物的名字">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="animal-description" class="col-sm-2 control-label">描述</label>
+                                <div class="col-sm-10">
+                                    <textarea rows="3" id="animal-description" name="description" class="form-control"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="species" class="col-sm-2 control-label">选择动物种类</label>
+                                <div class="col-sm-10">
+                                    <select class="form-control" id="species" name="species">
+                                        <option value="cat">猫</option>
+                                        <option  value="dogs">狗</option>
+                                        <option>其他</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="gender" class="col-sm-2 control-label">选择动物性别</label>
+                                <div class="col-sm-10">
+                                    <select class="form-control" id="gender" name="gender">
+                                        <option value="male">雄性</option>
+                                        <option value="female">雌性</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-offset-2 col-sm-10">
+                                    <button type="submit" class="btn btn-default">提交</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+
+            </div>
+            <div id="service" class="tab-pane"></div>
+        </div>
+
+    </div>
+</div>
+<div class="footer"></div>
+
+<script src="/pet-web/scripts/lib.js"></script>
+<script src="/pet-web/scripts/common.js"></script>
+<script src="/pet-web/scripts/animal-center.js"></script>
+<script>$(".header").load("../head.html");</script>
+</body>
+</html>

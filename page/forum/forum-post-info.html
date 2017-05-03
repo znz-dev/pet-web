@@ -5,19 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Title</title>
-    <link rel="stylesheet" href="styles/bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="styles/common.css">
-    <link rel="stylesheet" href="styles/head.css">
-    <link rel="stylesheet" href="styles/forum-post-info.css">
+    <link rel="stylesheet" href="/pet-web/styles/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="/pet-web/styles/common.css">
+    <link rel="stylesheet" href="/pet-web/styles/head.css">
+    <link rel="stylesheet" href="/pet-web/styles/forum-post-info.css">
 </head>
 <body>
 <div class="header"></div>
 <div class="content">
     <div class="container">
         <div class="row">
-            <ul>
+            <button class="btn btn-default">发帖</button>
+        </div>
+        <div class="row">
+            <ul class="post-info">
                 <li class="row">
-                    <div class="col-md-2">
+                    <div class="col-md-2 post-picture">
                         <img src="" alt="头像">
                         <p>介绍</p>
                     </div>
@@ -26,7 +29,7 @@
                     </div>
                 </li>
                 <li class="row">
-                    <div class="col-md-2">
+                    <div class="col-md-2 post-picture">
                         <img src="" alt="头像">
                         <p>介绍</p>
                     </div>
@@ -35,7 +38,16 @@
                     </div>
                 </li>
                 <li class="row">
-                    <div class="col-md-2">
+                    <div class="col-md-2 post-picture">
+                        <img src="" alt="头像">
+                        <p>介绍</p>
+                    </div>
+                    <div class="col-md-10">
+                        <p>内容</p>
+                    </div>
+                </li>
+                <li class="row">
+                    <div class="col-md-2 post-picture">
                         <img src="" alt="头像">
                         <p>介绍</p>
                     </div>
@@ -44,9 +56,9 @@
                     </div>
                 </li>
             </ul>
-            <div class="row">
+            <div class="row page">
                 <div class="col-md-12 text-center">
-                    <ul class="pagination pagination-sm">
+                    <ul class="pagination pagination-lg">
                         <li><a href="#">&laquo;</a></li>
                         <li class="active"><a href="#">1</a></li>
                         <li class="disabled"><a href="#">2</a></li>
@@ -57,21 +69,14 @@
                     </ul>
                 </div>
             </div>
-            <button class="btn btn-default">发帖</button>
         </div>
     </div>
 </div>
 <div class="footer"></div>
 
-<script src="scripts/jquery-3.1.1.min.js"></script>
-<script src="scripts/bootstrap.min.js"></script>
-<script>
-    $(
-        ".header"
-    ).load
-    (
-        "head.html"
-    );
+<script src="/pet-web/scripts/jquery-3.1.1.min.js"></script>
+<script src="/pet-web/scripts/bootstrap.min.js"></script>
+<script>$(".header").load("../head.html");
 </script>
 </body>
 </html>

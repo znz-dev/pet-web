@@ -1,23 +1,79 @@
-.header_all{
-    padding:20px 0px;
+.header, .header_logo, .header_animal_centre, .header_community, .header_user{
+    float: left;
+    position: absolute;
 }
-
 .header_logo{
-
+    margin: 50px 1px 1px 7%;
+    /*width: 230px;*/
+    /*height: 160px;*/
 }
-
 .header_animal_centre{
-
+    margin: 60px 1px 1px 36%;
+    /*width: 360px;*/
+    /*height: 220px;*/
 }
-
-.header_community img{
-    padding-top: 20px;
+.header_community{
+    margin: 35px 1px 1px 72%;
+    /*width: 140px;*/
+    /*height: 160px;*/
 }
-
 .header_user{
-    padding-top: 20px;
+    margin: 30px 1px 1px 90%;
+    /*width: 125px;*/
+    /*height: 65px;*/
 }
 
-#header-new .header_community_new{
-    margin-left: 10%;
+.header_user #user{
+    width: 125px;
+    height: 65px;
+    display: block;
+    background-image: url("../images/用户.png");
+    text-align: center;
+    line-height: 65px;
 }
+
+.header_all{
+    height: 400px;
+    background-image: url("../images/index-head.png");
+    /*background-repeat: repeat-x;*/
+    background-repeat: repeat-x;
+}
+
+#content{
+    /*height: 400px;*/
+}
+
+#content .tree-left{
+    position: absolute;
+    margin: -150px 1px 1px 0;
+}
+
+#content .tree-right{
+    position: absolute;
+    margin: -150px 1px 1px 70%;
+}
+
+#content .gress-1{
+    position: absolute;
+    margin: 110px 1px 1px 4%;
+}
+#content .gress-2{
+    position: absolute;
+    margin: 110px 1px 1px 17%;
+}
+#content .gress-3{
+    position: absolute;
+    margin: 155px 1px 1px 83%;
+}
+
+#myCarousel img{
+    /*width: 100%;*/
+    margin: auto;
+}
+
+#myCarousel .carousel-inner{
+    margin-top: -140px;
+    height: 380px;
+    border: 4px solid #8f8f8f;
+}
+

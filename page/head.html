@@ -1,0 +1,50 @@
+<div id="header">
+    <nav class="navbar" role="navigation">
+        <div class="container text-center">
+            <div class="nav row header_all">
+                <div class="col-md-3 text-center">
+                    <a href="/pet-web/index.html" class="header_logo">
+                        <img src="/pet-web/images/head-救济站.png" alt="江湖救济站">
+                    </a>
+                </div>
+                <div class="col-md-6 text-center">
+                    <a href="/pet-web/page/animal/animal-center.html" class="header_animal_centre">
+                        <img src="/pet-web/images/head-动物中心.png" alt="动物中心">
+                    </a>
+                </div>
+                <div class="col-md-2 text-center">
+                    <a href="/pet-web/page/forum/forum-index.html" class="header_community">
+                        <img src="/pet-web/images/head-社区.png" alt="社区">
+                    </a>
+                </div>
+                <div class="col-md-1 text-center">
+                    <div class="header_user">
+                        <a href="#" id="user" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <!--<img src="/pet-web/images/1.gif" alt="">-->
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li role="separator" class="divider"></li>
+                            <li class="user-on"><a href="/pet-web/page/user/user-info.html">个人信息</a></li>
+                            <li class="user-on"><a href="/pet-web/page/user/user-message.html">我的消息</a></li>
+                            <li class="user-on"><a href="/pet-web/page/user/user-focus.html">我的关注</a></li>
+                            <li class="user-on"><a href="/pet-web/page/user/user-animals.html">我的宠物</a></li>
+                            <li class="user-on"><a id="log-off" href="#">注销</a></li>
+                            <li class="user-off"><a href="/pet-web/page/login.html">登陆</a></li>
+                            <li class="user-off"><a href="/pet-web/page/register.html">注册</a></li>
+                            <li role="separator" class="divider"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>
+
+<script>
+    $(".header_user #log-off").click(function () {
+        $.cookie("userId", '', { expires: -1, path : '/'});
+        $.cookie("username", '', { expires: -1, path : '/'});
+        $.cookie("password", '', { expires: -1, path : '/'});
+        window.location.href = "/pet-web/index.html";
+    })
+</script>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>个人信息</title>
+    <link rel="stylesheet" href="/pet-web/styles/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="/pet-web/styles/common.css">
+    <link rel="stylesheet" href="/pet-web/styles/head.css">
+    <link rel="stylesheet" href="/pet-web/styles/user-nav.css">
+    <link rel="stylesheet" href="/pet-web/styles/user-info.css">
+</head>
+<body>
+<div class="header"></div>
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div id="user-nav">
+                <div class="col-md-2 text-center nav-main">
+                    <ul class="nav nav-tabs nav-stacked">
+                        <li class="active" id="my-info"><a data-toggle="tab" href="#info">我的信息</a></li>
+                        <li id="my-focus"><a data-toggle="tab" href="#focus">我的关注</a></li>
+                        <li id="my-message"><a data-toggle="tab" href="#message">我的消息</a></li>
+                        <li id="my-animal"><a data-toggle="tab" href="#animal">我的动物</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 text-center nav-follow">
+                    <div class="tab-content">
+                        <div id="info" class="tab-pane fade in active">
+                            <ul class="nav nav-tabs nav-stacked">
+                                <li class="active" id="user-info"><a data-toggle="tab"  href="javascript:void(0)">全部</a></li>
+                                <li><a data-toggle="tab" href="javascript:void(0)">头像</a></li>
+                                <li><a data-toggle="tab" href="javascript:void(0)">账号</a></li>
+                            </ul>
+                            <div class="triangle-info"></div>
+                        </div>
+                        <div id="focus" class="tab-pane">
+                            <ul class="nav nav-tabs nav-stacked">
+                                <li class="active" id="user-focus"><a data-toggle="tab" href="javascript:void(0)">我关注的宠物</a></li>
+                                <li><a data-toggle="tab" href="javascript:void(0)">我关注的人</a></li>
+                                <li><a data-toggle="tab" href="javascript:void(0)">我关注的帖子</a></li>
+                            </ul>
+                            <div class="triangle-focus"></div>
+                        </div>
+                        <div id="message" class="tab-pane">
+                            <ul class="nav nav-tabs nav-stacked">
+                                <li class="active" id="user-message"><a data-toggle="tab" href="javascript:void(0)">全部</a></li>
+                                <li><a data-toggle="tab" href="javascript:void(0)">已查看</a></li>
+                                <li><a data-toggle="tab" href="javascript:void(0)">未查看</a></li>
+                            </ul>
+                            <div class="triangle-message"></div>
+                        </div>
+                        <div id="animal" class="tab-pane">
+                            <ul class="nav nav-tabs nav-stacked">
+                                <li class="active" id="user-animals"><a data-toggle="tab" href="javascript:void(0)">全部</a></li>
+                                <li><a data-toggle="tab" href="javascript:void(0)">我领养的</a></li>
+                                <li><a data-toggle="tab" href="javascript:void(0)">我发布的</a></li>
+                            </ul>
+                            <div class="triangle-animal"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-1">
+                    <div class="vertical-line"></div>
+                </div>
+            </div>
+
+            <div class="col-md-7 nav-info">
+                <div class="content">
+                    <div class="row">
+                        <div class="col-md-4 text-center info-left">
+                            <img src="images/210x210.png" alt="">
+                            <h1>用户名：张宾</h1>
+                            <h4>描述：哈哈哈哈哈</h4>
+                        </div>
+                        <div class="col-md-6 info-right">
+                            <div class="row">
+                                <div class="col-md-4 text-right">电话：</div>
+                                <div class="col-md-8">110</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4 text-right">电话：</div>
+                                <div class="col-md-8">110</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4 text-right">电话：</div>
+                                <div class="col-md-8">110</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4 text-right">电话：</div>
+                                <div class="col-md-8">110</div>
+                            </div>
+                            <div class="row text-right">
+                                <a href="#" class="btn btn-default btn-lg">修改</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer"></div>
+
+<script src="/pet-web/scripts/lib.js"></script>
+<script src="/pet-web/scripts/common.js"></script>
+<script src="/pet-web/scripts/user-nav.js"></script>
+<script>
+    $(".header").load("/pet-web/page/head.html");
+    $("#user-nav").load("user-nav.html");
+</script>
+</body>
+</html>
+
+
