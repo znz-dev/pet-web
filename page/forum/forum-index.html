@@ -14,43 +14,33 @@
 <div class="header"></div>
 <div class="content">
     <div class="container">
-        <div class="row plates">
+        <div class="row">
+            <div class="col-md-2"><button data-toggle="modal" data-target="#create-topic">新建板块</button></div>
+        </div>
+        <div class="row topics">
             <div class="col-md-6">
-                <div class="plate row">
-                    <div class="col-md-3 plate-picture">
-                        <a href="forum-posts.html"><img class="" src="" alt="参照图"></a>
+                <div class="topic row">
+                    <div class="hidden"></div>
+                    <div class="col-md-3 topic-picture">
+                        <a href="forum-posts.html"><img class="" src="/pet-web/images/forum.gif" alt="参照图"></a>
                     </div>
-                    <div class="col-md-9 plate-info">
+                    <div class="col-md-9 topic-info">
                         <p>食物区</p>
                         <p>
                             <span>主题：1</span>
                             <span>帖子：2</span>
                         </p>
                         <p>介绍</p>
+                        <button>删除板块</button>
                     </div>
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="plate row">
-                    <div class="col-md-3 plate-picture">
-                        <img class="" src="" alt="参照图">
+                <div class="topic row">
+                    <div class="col-md-3 topic-picture">
+                        <img class="" src="/pet-web/images/forum.gif" alt="参照图">
                     </div>
-                    <div class="col-md-9 plate-info">
-                        <p>食物区</p>
-                        <p>
-                            <span>主题：1</span>
-                            <span>帖子：2</span>
-                        </p>
-                        <p>介绍</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="plate row">
-                    <div class="col-md-3 plate-picture">
-                        <img class="" src="" alt="参照图">
-                    </div>
-                    <div class="col-md-9 plate-info">
+                    <div class="col-md-9 topic-info">
                         <p>食物区</p>
                         <p>
                             <span>主题：1</span>
@@ -62,11 +52,40 @@
             </div>
         </div>
     </div>
+    <div class="modal fade" id="create-topic" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                    <h4 class="modal-title">
+                        新建板块
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <form id="create-topic-form" enctype="multipart/form-data">
+                        选择图片：<input type="file" name="avatar"><br>
+                        板块名：<input type="text" name="name"><br>
+                        板块描述：<textarea rows="3" name="description"></textarea><br>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                    </button>
+                    <button type="button" class="btn btn-primary" id="create-topic-submit">
+                        提交
+                    </button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal -->
+    </div>
 </div>
 <div class="footer"></div>
 
 <script src="/pet-web/scripts/lib.js"></script>
 <script src="/pet-web/scripts/common.js"></script>
+<script src="/pet-web/scripts/forum-index.js"></script>
 <script>
     $(".header").load("../head.html");
 </script>

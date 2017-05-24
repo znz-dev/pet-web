@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>我的消息</title>
+    <link rel="stylesheet" href="/pet-web/styles/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="/pet-web/styles/common.css">
+    <link rel="stylesheet" href="/pet-web/styles/head.css">
+    <link rel="stylesheet" href="/pet-web/styles/user-nav.css">
+    <link rel="stylesheet" href="/pet-web/styles/user-message.css">
+</head>
+<body>
+<div class="header"></div>
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div id="user-nav">
+            </div>
+
+            <div class="col-md-9 nav-info">
+                <ul class="nav nav-tabs row">
+                    <li class="active"><a data-toggle="tab" href="#message-all">全部</a></li>
+                    <li><a data-toggle="tab" href="javascript:void(0)">我的申请记录</a></li>
+                    <li><a data-toggle="tab" href="javascript:void(0)">收到的申请</a></li>
+                </ul>
+                <div id="myTabContent" class="tab-content row">
+                    <div id="message-all" class="tab-pane fade in active content">
+                        <ul>
+                            <li class="row">
+                                <div class="hidden fromId"></div>
+                                <div class="col-md-2"><a href="{animalUrl}">zhou</a></div>
+                                <div class="col-md-2"><a href="{animalUrl}">二筒</a></div>
+                                <div class="col-md-4">您好，我想领养这只猫</div>
+                                <div class="col-md-2"><button>发消息</button></div>
+                                <div class="col-md-2"><button>同意</button><button>拒绝</button></div>
+                            </li>
+                            <li class="row">
+                                <div class="hidden fromId"></div>
+                                <div class="col-md-2"><a href="{animalUrl}">liu</a></div>
+                                <div class="col-md-2"><a href="{animalUrl}">二筒</a></div>
+                                <div class="col-md-4">您好，我很喜欢这只猫，我想领养这只猫</div>
+                                <div class="col-md-2"><button>发消息</button></div>
+                                <div class="col-md-2"><button>同意</button><button>拒绝</button></div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer"></div>
+
+<script src="/pet-web/scripts/lib.js"></script>
+<script src="/pet-web/scripts/common.js"></script>
+<script src="/pet-web/scripts/user-nav.js"></script>
+<script>
+    $(".header").load("/pet-web/page/head.html");
+    $("#user-nav").load("user-nav.html");
+</script>
+</body>
+</html>
+
+
+
+

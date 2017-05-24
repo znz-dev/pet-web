@@ -93,15 +93,21 @@
                                 <a href="#">
                                     <img src="/pet-web/images/210x210.png" alt="添加图片">
                                 </a>
-                                <input type="file" id="inputfile" name="avatar">
                                 <p>上传头像</p>
+                                <input type="file" id="inputfile" name="avatar">
                             </div>
                         </div>
                         <div class="col-md-8">
                             <div class="form-group">
-                                <label for="animal-name" class="col-sm-2 control-label">名字</label>
+                            <label for="animal-name" class="col-sm-2 control-label">名字</label>
+                            <div class="col-sm-10">
+                                <input type="text" id="animal-name" name="name" class="form-control" placeholder="请填写动物的名字">
+                            </div>
+                        </div>
+                            <div class="form-group">
+                                <label for="animal-name" class="col-sm-2 control-label">年龄</label>
                                 <div class="col-sm-10">
-                                    <input type="text" id="animal-name" name="name" class="form-control" placeholder="请填写动物的名字">
+                                    <input type="text" id="animal-name-1" name="name" class="form-control" placeholder="请填写动物的名字">
                                 </div>
                             </div>
                             <div class="form-group">
@@ -130,6 +136,33 @@
                                 </div>
                             </div>
                             <div class="form-group">
+                                <label for="gender" class="col-sm-2 control-label">健康状态</label>
+                                <div class="col-sm-10">
+                                    <select class="form-control" id="healthy" name="healthy">
+                                        <option value="male">良好</option>
+                                        <option value="female">差</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="gender" class="col-sm-2 control-label">绝育</label>
+                                <div class="col-sm-10">
+                                    <select class="form-control" id="healthy1" name="healthy">
+                                        <option value="male">是</option>
+                                        <option value="female">否</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="gender" class="col-sm-2 control-label">免疫</label>
+                                <div class="col-sm-10">
+                                    <select class="form-control" id="healthy2" name="healthy">
+                                        <option value="male">是</option>
+                                        <option value="female">否</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
                                 <div class="col-sm-offset-2 col-sm-10">
                                     <button type="submit" class="btn btn-default">提交</button>
                                 </div>
@@ -140,7 +173,26 @@
                 </form>
 
             </div>
-            <div id="service" class="tab-pane"></div>
+            <div id="service" class="tab-pane">
+                <form id="123" class="form-horizontal" enctype="multipart/form-data">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="form-group">
+                                <label for="animal-description" class="col-sm-2 control-label">消息内容</label>
+                                <div class="col-sm-10">
+                                    <textarea rows="3" id="" name="description" class="form-control"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-offset-2 col-sm-10">
+                                    <button type="submit" class="btn btn-default">提交</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
         </div>
 
     </div>

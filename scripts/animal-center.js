@@ -7,7 +7,6 @@ $(document).ready(function() {
         showAnimals(data.data.pets);
         showPage(data.data.total_pages,1);
     }
-
 });
 
 //获取全部动物信息，每页显示12条，显示第一条，用于首次进入页面显示的内容
@@ -82,7 +81,7 @@ function showAnimals(data){
     {
         var id = content.id;
         var name = content.name;
-        var place = content.price;
+        var place = content.place;
         var description = content.description != null ? content.description : '无';
         var isAdopter = content.adopter != null ? '已领养' : '待领养';
         var collection = '12';
@@ -127,12 +126,10 @@ $('.good_page .pagination').on('click',function(e){
     var animals = getAnimals(page, data);
     if(animals.status.code == '20000'){
         showAnimals(animals.data.pets);
-        showPage(animals.data.total_pages,1);
-        console.log($(e.target).parent('li').text());
-        console.log($(e.target).parent('li').attr('class'));
-        $(e.target).parent('li').attr('class',"active");
-        $('.good_page .pagination li[page='+page+']').attr('class',"active");
-        $('.good_page .pagination li[page='+page+']').siblings().attr('class',"");
+        showPage(animals.data.total_pages,page);
+        // $(e.target).parent('li').attr('class',"active");
+        // $('.good_page .pagination li[page='+page+']').attr('class',"active");
+        // $('.good_page .pagination li[page='+page+']').siblings().attr('class',"");
     }
 })
 
@@ -140,30 +137,34 @@ $('.good_page .pagination').on('click',function(e){
 $("#publication-form").submit(function (e) {
     //阻止按钮的默认提交操作
     e.preventDefault();
-    var data = {};
-    data['name'] = $('#animal-name').val();
-    data['description'] = $('#animal-description').val();
-    data['species'] = $('#species').val();
-    data['gender'] = $('#gender').val();
-    data['provider_id'] = $.cookie('userId');
-    var result = creatAnimal(data);
+    var formData = new FormData($( "#publication-form" )[0]);
+    formData.append("provider_id", $.cookie('userId'));
+    // var data = {};
+    // data['name'] = $('#animal-name').val();
+    // data['description'] = $('#animal-description').val();
+    // data['species'] = $('#species').val();
+    // data['gender'] = $('#gender').val();
+    // data['provider_id'] = $.cookie('userId');
+    var result = createAnimal(formData);
     if(result.responseJSON.status.code == "20000"){
         alert("创建成功");
-        window.location.href = "/pet-web/page/animal/animal-show.html?id=" + result.responseJSON.data.pet.id;
+        window.location.href = "/pet-web/page/animal/animal-show.html?animalId=" + result.responseJSON.data.pet.id;
     }
 })
 
 //创建宠物的ajax请求
-function creatAnimal(data) {
+function createAnimal(data) {
     return(
     $.ajax({
         method: "post",
         url: path.basePath + 'pets.json',
         data: data,
         dataType: "json",
-        async: false
-    })
-    );
+        async: false,
+        cache: false,
+        contentType: false,
+        processData: false
+    }))
 }
 
 //宠物种类改变

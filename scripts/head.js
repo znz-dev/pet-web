@@ -15,8 +15,6 @@ $(document).ready(function () {
     }
 })
 
-
-
 $(".header_user #log-off").click(function () {
     $.cookie('userId','');
     $.cookie('username','');

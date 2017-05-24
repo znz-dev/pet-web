@@ -1,19 +1,19 @@
-$(document).ready(function () {
-    var urlPath = window.location.pathname;
-    var active;
-    $(".nav-main li").each(function () {
-        if(urlPath.indexOf($(this).attr("id")) != -1){
-            // $(this).attr("class","active");
-            $(this).find('a').tab('show');
-            active = $(this).attr("id");
-        }
-    })
-    $(".nav-follow div").each(function () {
-        if(active == ("user-"+$(this).attr("id"))){
-            $(this).addClass("in active");
-        }
-    })
-})
+// $(document).ready(function () {
+//     var urlPath = window.location.pathname;
+//     var active;
+//     $(".nav-main li").each(function () {
+//         if(urlPath.indexOf($(this).attr("id")) != -1){
+//             // $(this).attr("class","active");
+//             $(this).find('a').tab('show');
+//             active = $(this).attr("id");
+//         }
+//     })
+//     $(".nav-follow div").each(function () {
+//         if(active == ("user-"+$(this).attr("id"))){
+//             $(this).addClass("in active");
+//         }
+//     })
+// })
 
 $("#user-focus a").click(function () {
     alert('1');

@@ -19,80 +19,65 @@
             <div id="user-nav">
                 <div class="col-md-2 text-center nav-main">
                     <ul class="nav nav-tabs nav-stacked">
-                        <li class="active" id="my-info"><a data-toggle="tab" href="#info">我的信息</a></li>
-                        <li id="my-focus"><a data-toggle="tab" href="#focus">我的关注</a></li>
-                        <li id="my-message"><a data-toggle="tab" href="#message">我的消息</a></li>
-                        <li id="my-animal"><a data-toggle="tab" href="#animal">我的动物</a></li>
+                        <li id="user-info"><a href="user-info.html">我的信息</a></li>
+                        <li id="user-focus"><a href="user-focus.html">我的关注</a></li>
+                        <li id="user-message"><a href="user-message.html">我的消息</a></li>
+                        <li id="user-animals"><a href="user-animals.html">我的动物</a></li>
                     </ul>
-                </div>
-                <div class="col-md-2 text-center nav-follow">
-                    <div class="tab-content">
-                        <div id="info" class="tab-pane fade in active">
-                            <ul class="nav nav-tabs nav-stacked">
-                                <li class="active" id="user-info"><a data-toggle="tab"  href="javascript:void(0)">全部</a></li>
-                                <li><a data-toggle="tab" href="javascript:void(0)">头像</a></li>
-                                <li><a data-toggle="tab" href="javascript:void(0)">账号</a></li>
-                            </ul>
-                            <div class="triangle-info"></div>
-                        </div>
-                        <div id="focus" class="tab-pane">
-                            <ul class="nav nav-tabs nav-stacked">
-                                <li class="active" id="user-focus"><a data-toggle="tab" href="javascript:void(0)">我关注的宠物</a></li>
-                                <li><a data-toggle="tab" href="javascript:void(0)">我关注的人</a></li>
-                                <li><a data-toggle="tab" href="javascript:void(0)">我关注的帖子</a></li>
-                            </ul>
-                            <div class="triangle-focus"></div>
-                        </div>
-                        <div id="message" class="tab-pane">
-                            <ul class="nav nav-tabs nav-stacked">
-                                <li class="active" id="user-message"><a data-toggle="tab" href="javascript:void(0)">全部</a></li>
-                                <li><a data-toggle="tab" href="javascript:void(0)">已查看</a></li>
-                                <li><a data-toggle="tab" href="javascript:void(0)">未查看</a></li>
-                            </ul>
-                            <div class="triangle-message"></div>
-                        </div>
-                        <div id="animal" class="tab-pane">
-                            <ul class="nav nav-tabs nav-stacked">
-                                <li class="active" id="user-animals"><a data-toggle="tab" href="javascript:void(0)">全部</a></li>
-                                <li><a data-toggle="tab" href="javascript:void(0)">我领养的</a></li>
-                                <li><a data-toggle="tab" href="javascript:void(0)">我发布的</a></li>
-                            </ul>
-                            <div class="triangle-animal"></div>
-                        </div>
-                    </div>
                 </div>
                 <div class="col-md-1">
                     <div class="vertical-line"></div>
                 </div>
             </div>
-
-            <div class="col-md-7 nav-info">
-                <div class="content">
-                    <div class="row">
-                        <div class="col-md-4 text-center info-left">
-                            <img src="images/210x210.png" alt="">
-                            <h1>用户名：张宾</h1>
-                            <h4>描述：哈哈哈哈哈</h4>
+            <div class="col-md-9 nav-info tab-content">
+                <ul class="nav nav-tabs row">
+                    <li class="active"><a data-toggle="tab" href="#info-all">全部</a></li>
+                    <li><a data-toggle="tab" href="#info-avatar">头像</a></li>
+                </ul>
+                <div id="myTabContent" class="tab-content row">
+                    <div id="info-all" class="tab-pane fade in active content">
+                        <div class="row">
+                            <div class="col-md-4 text-center info-left">
+                                <img class="avatar" src="/pet-web/images/210x210.png" alt="">
+                                <!--<h1>用户名：张宾</h1>-->
+                                <!--<h4>描述：哈哈哈哈哈</h4>-->
+                            </div>
+                            <div class="col-md-6 info-right">
+                                <div class="row">
+                                    <div class="col-md-4 text-right">用户名：</div>
+                                    <div class="col-md-8" id="username"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4 text-right">真实姓名：</div>
+                                    <div class="col-md-8" id="real_name"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4 text-right">电话：</div>
+                                    <div class="col-md-8" id="phone"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4 text-right">邮箱：</div>
+                                    <div class="col-md-8" id="email"></div>
+                                </div>
+                                <div class="row text-right">
+                                    <button class="btn btn-default btn-lg" data-toggle="modal" data-target="#changePassword">修改密码</button>
+                                    <button class="btn btn-default btn-lg" data-toggle="modal" data-target="#changeInfo">修改个人信息</button>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-md-6 info-right">
-                            <div class="row">
-                                <div class="col-md-4 text-right">电话：</div>
-                                <div class="col-md-8">110</div>
+                    </div>
+                    <div class="tab-pane fade content" id="info-avatar">
+                        <div class="row">
+                            <div class="col-md-4 text-center info-left">
+                                <img class="avatar" src="/pet-web/images/210x210.png" alt="">
+                                <h1>现用头像</h1>
                             </div>
-                            <div class="row">
-                                <div class="col-md-4 text-right">电话：</div>
-                                <div class="col-md-8">110</div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-4 text-right">电话：</div>
-                                <div class="col-md-8">110</div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-4 text-right">电话：</div>
-                                <div class="col-md-8">110</div>
-                            </div>
-                            <div class="row text-right">
-                                <a href="#" class="btn btn-default btn-lg">修改</a>
+                            <div class="col-md-6 text-center info-left">
+                                <h1>更换头像</h1>
+                                <form id="change-avatar">
+                                    <input id="fileupload" type="file" name="avatar" >
+                                </form>
+                                <button id="change-avatar_submit">提交</button>
                             </div>
                         </div>
                     </div>
@@ -100,12 +85,66 @@
             </div>
         </div>
     </div>
+    <div class="modal fade" id="changePassword" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                    <h4 class="modal-title">
+                        修改密码
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    请输入旧密码：<input type="password">
+                    请输入新密码：<input type="password">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                    </button>
+                    <button type="button" class="btn btn-primary" id="changePassword_submit">
+                        提交
+                    </button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal -->
+    </div>
+    <div class="modal fade" id="changeInfo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                    <h4 class="modal-title">
+                        修改个人信息
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <ul class="">
+                        <li class="real_name">真实姓名：<input type="text" name="real_name"></li>
+                        <li class="phone">电话：<input type="text" name="phone"></li>
+                        <li class="email">邮箱：<input type="text" name="email"></li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                    </button>
+                    <button type="button" class="btn btn-primary" id="changeInfo_submit">
+                        提交
+                    </button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal -->
+    </div>
 </div>
 <div class="footer"></div>
 
 <script src="/pet-web/scripts/lib.js"></script>
 <script src="/pet-web/scripts/common.js"></script>
 <script src="/pet-web/scripts/user-nav.js"></script>
+<script src="/pet-web/scripts/user-info.js"></script>
 <script>
     $(".header").load("/pet-web/page/head.html");
     $("#user-nav").load("user-nav.html");

@@ -1,21 +1,21 @@
-.plate{
+.topic{
     background-color: #eff5b8;
     margin: 10px 0px;
 }
 
-.plates .plate{
+.topics .topic{
     border: 10px solid;
     border-radius: 20px;
 }
-.plates .plate .plate-picture img{
+.topics .topic .topic-picture img{
     height: 100px;
     width: 100px;
 }
 
-.plates .plate .plate-picture{
+.topics .topic .topic-picture{
     padding: 10px 10px;
 }
 
-.plates .plate .plate-info{
+.topics .topic .topic-info{
     padding: 10px 0px 5px 20px;
 }

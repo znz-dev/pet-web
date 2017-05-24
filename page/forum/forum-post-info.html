@@ -15,7 +15,8 @@
 <div class="content">
     <div class="container">
         <div class="row">
-            <button class="btn btn-default">发帖</button>
+            <button class="btn btn-default" data-toggle="modal" data-target="#create-reply">回复</button>
+            <button class="btn btn-default" id="collection">关注</button>
         </div>
         <div class="row">
             <ul class="post-info">
@@ -39,16 +40,7 @@
                 </li>
                 <li class="row">
                     <div class="col-md-2 post-picture">
-                        <img src="" alt="头像">
-                        <p>介绍</p>
-                    </div>
-                    <div class="col-md-10">
-                        <p>内容</p>
-                    </div>
-                </li>
-                <li class="row">
-                    <div class="col-md-2 post-picture">
-                        <img src="" alt="头像">
+                        <img src="/pet-web/images/头像.gif" alt="头像">
                         <p>介绍</p>
                     </div>
                     <div class="col-md-10">
@@ -71,11 +63,36 @@
             </div>
         </div>
     </div>
+    <div class="modal fade" id="create-reply" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                    <h4 class="modal-title">
+                        回复
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    内容：<textarea rows="3" name="content"></textarea><br>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                    </button>
+                    <button type="button" class="btn btn-primary" id="create-reply-submit">
+                        提交更改
+                    </button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal -->
+    </div>
 </div>
 <div class="footer"></div>
 
-<script src="/pet-web/scripts/jquery-3.1.1.min.js"></script>
-<script src="/pet-web/scripts/bootstrap.min.js"></script>
+<script src="/pet-web/scripts/lib.js"></script>
+<script src="/pet-web/scripts/common.js"></script>
+<script src="/pet-web/scripts/forum-post-info.js"></script>
 <script>$(".header").load("../head.html");
 </script>
 </body>

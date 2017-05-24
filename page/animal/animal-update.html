@@ -18,17 +18,12 @@
             <div class="col-md-5 col-md-offset-1 text-center">
                 <div class="info_left text-center">
                     <h1 class="description">描述：</h1>
-                    <h4 class="isAdopter"></h4>
                     <div class="avatar">
                         <!--<img src="/pet-web/images/乔巴.png" alt="123">-->
                     </div>
                     <div>
                         <h4>领养要求：</h4>
                         <h2 class="adoption_requirements"></h2>
-                    </div>
-                    <div class="hidden">
-                        <p class="userId"></p>
-                        <p class="animalId"></p>
                     </div>
                 </div>
             </div>
@@ -46,13 +41,13 @@
                 </div>
             </div>
             <div class="col-md-1 info-btn">
-                <button class="btn btn-default" data-toggle="modal" data-target="#toAdopt">我要领养</button>
+                <button class="btn btn-default" data-toggle="modal" data-target="#update-avatar">修改图片</button>
                 &nbsp;
-                <button class="btn btn-default" data-toggle="modal" data-target="#toContact">联系饲主</button>
+                <button class="btn btn-default" data-toggle="modal" data-target="#update-info">修改信息</button>
                 &nbsp;
-                <button class="btn btn-default" id="toCollection">添加关注</button>
+                <button class="btn btn-default" data-toggle="modal" data-target="#add-picture">添加相片</button>
                 &nbsp;
-                <button class="btn btn-default" data-toggle="modal" data-target="#toComment">添加留言</button>
+                <button class="btn btn-default" data-toggle="modal" data-target="#add-dynamic">添加动态</button>
             </div>
         </div>
         <div class="row animal_extend">
@@ -65,11 +60,6 @@
                 <li>
                     <a href="#dynamic" data-toggle="tab">
                         动态
-                    </a>
-                </li>
-                <li>
-                    <a href="#comments" data-toggle="tab">
-                        留言
                     </a>
                 </li>
             </ul>
@@ -101,28 +91,10 @@
                         </li>
                     </ul>
                 </div>
-                <div class="tab-pane fade row" id="comments">
-                    <ul>
-                        <li class="row">
-                            <div class="col-md-2 text-center">
-                                <img class="row" src="/pet-web/images/50x50.png" alt="头像">
-                                <p>用户名</p>
-                            </div>
-                            <div class="col-md-10">
-                                <p class="row">
-                                    非常棒非常棒非常棒非常棒非常棒非常棒非常棒非常棒非常棒非常棒非常棒非常棒
-                                    非常棒非常棒非常棒非常棒非常棒非常棒非常棒非常棒非常棒非常棒非常棒非常棒
-                                    非常棒非常棒非常棒非常棒非常棒非常棒非常棒非常棒非常棒非常棒非常棒非常棒
-                                    非常棒非常棒非常棒非常棒非常棒非常棒非常棒非常棒非常棒非常棒非常棒非常棒
-                                </p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
             </div>
         </div>
     </div>
-    <div class="modal fade" id="toAdopt" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal fade" id="update-avatar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -130,23 +102,23 @@
                         &times;
                     </button>
                     <h4 class="modal-title">
-                        领养请求
+                        更换宠物头像
                     </h4>
                 </div>
                 <div class="modal-body">
-                    <textarea rows="3" name="content"></textarea>
+                    在这里添加一些文本
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">关闭
                     </button>
-                    <button type="button" class="btn btn-primary" id="toAdopt-form_submit">
-                        提交
+                    <button type="button" class="btn btn-primary" id="animal-photo-form_submit">
+                        提交更改
                     </button>
                 </div>
             </div><!-- /.modal-content -->
         </div><!-- /.modal -->
     </div>
-    <div class="modal fade" id="toContact" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal fade" id="update-info" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -154,24 +126,34 @@
                         &times;
                     </button>
                     <h4 class="modal-title">
-                        联系饲主
+                        修改动物信息
                     </h4>
                 </div>
                 <div class="modal-body">
-                    消息标题：<input type="text" name="title"><br>
-                    消息内容：<textarea rows="3" name="content"></textarea><br>
+                    <ul class="">
+                        <li class="name">姓名：<input type="text" name="name"></li>
+                        <li class="age">年龄：<input type="text" name="age"></li>
+                        <li class="gender">性别：<input type="text" name="gender"></li>
+                        <li class="species">品种：<input type="text" name="species"></li>
+                        <li class="healthy">健康：<input type="text" name="healthy"></li>
+                        <li class="neutered">绝育：<input type="text" name="neutered"></li>
+                        <li class="vaccinated">免疫：<input type="text" name="vaccinated"></li>
+                        <li class="description">描述：<textarea rows="3" name="description"></textarea></li>
+                        <li class="adoption_requirements">领养要求：<textarea rows="3" name="adoption_requirements"></textarea></li>
+                    </ul>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                    <button type="button" class="btn btn-default" data-dismiss="modal">
+                        关闭
                     </button>
-                    <button type="button" class="btn btn-primary" id="toContact-form_submit">
-                        提交
+                    <button type="button" class="btn btn-primary" id="animal-info-form_submit">
+                        提交更改
                     </button>
                 </div>
             </div><!-- /.modal-content -->
         </div><!-- /.modal -->
     </div>
-    <div class="modal fade" id="toComment" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal fade" id="add-picture" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -179,17 +161,44 @@
                         &times;
                     </button>
                     <h4 class="modal-title">
-                        添加留言
+                        添加一张新图片
                     </h4>
                 </div>
                 <div class="modal-body">
-                    留言内容：<textarea rows="3" name="content"></textarea><br>
+                    <form id="add-picture-form" class="form-horizontal" enctype="multipart/form-data">
+                        <input type="file" name="avatar">
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">
+                        关闭
+                    </button>
+                    <button type="button" class="btn btn-primary" id="animal-picture-form_submit">
+                        提交更改
+                    </button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal -->
+    </div>
+    <div class="modal fade" id="add-dynamic" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                    <h4 class="modal-title">
+                        添加一条新动态
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    内容：<textarea rows="3" name="content"></textarea><br>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">关闭
                     </button>
-                    <button type="button" class="btn btn-primary" id="toComment-form_submit">
-                        提交
+                    <button type="button" class="btn btn-primary" id="animal-dynamic-form_submit">
+                        提交更改
                     </button>
                 </div>
             </div><!-- /.modal-content -->
@@ -200,7 +209,7 @@
 
 <script src="/pet-web/scripts/lib.js"></script>
 <script src="/pet-web/scripts/common.js"></script>
-<script src="/pet-web/scripts/animal-show.js"></script>
+<script src="/pet-web/scripts/animal-update.js"></script>
 <script>
     $(".header").load("../head.html");
 </script>

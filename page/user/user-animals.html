@@ -17,76 +17,69 @@
     <div class="container-fluid">
         <div class="row">
             <div id="user-nav">
-                <div class="col-md-2 text-center nav-main">
-                    <ul class="nav nav-tabs nav-stacked">
-                        <li class="active" id="my-info"><a data-toggle="tab" href="#info">我的信息</a></li>
-                        <li id="my-focus"><a data-toggle="tab" href="#focus">我的关注</a></li>
-                        <li id="my-message"><a data-toggle="tab" href="#message">我的消息</a></li>
-                        <li id="my-animal"><a data-toggle="tab" href="#animal">我的动物</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-2 text-center nav-follow">
-                    <div class="tab-content">
-                        <div id="info" class="tab-pane fade in active">
-                            <ul class="nav nav-tabs nav-stacked">
-                                <li class="active" id="user-info"><a data-toggle="tab"  href="javascript:void(0)">全部</a></li>
-                                <li><a data-toggle="tab" href="javascript:void(0)">头像</a></li>
-                                <li><a data-toggle="tab" href="javascript:void(0)">账号</a></li>
-                            </ul>
-                            <div class="triangle-info"></div>
-                        </div>
-                        <div id="focus" class="tab-pane">
-                            <ul class="nav nav-tabs nav-stacked">
-                                <li class="active" id="user-focus"><a data-toggle="tab" href="javascript:void(0)">我关注的宠物</a></li>
-                                <li><a data-toggle="tab" href="javascript:void(0)">我关注的人</a></li>
-                                <li><a data-toggle="tab" href="javascript:void(0)">我关注的帖子</a></li>
-                            </ul>
-                            <div class="triangle-focus"></div>
-                        </div>
-                        <div id="message" class="tab-pane">
-                            <ul class="nav nav-tabs nav-stacked">
-                                <li class="active" id="user-message"><a data-toggle="tab" href="javascript:void(0)">全部</a></li>
-                                <li><a data-toggle="tab" href="javascript:void(0)">已查看</a></li>
-                                <li><a data-toggle="tab" href="javascript:void(0)">未查看</a></li>
-                            </ul>
-                            <div class="triangle-message"></div>
-                        </div>
-                        <div id="animal" class="tab-pane">
-                            <ul class="nav nav-tabs nav-stacked">
-                                <li class="active" id="user-animals"><a data-toggle="tab" href="javascript:void(0)">全部</a></li>
-                                <li><a data-toggle="tab" href="javascript:void(0)">我领养的</a></li>
-                                <li><a data-toggle="tab" href="javascript:void(0)">我发布的</a></li>
-                            </ul>
-                            <div class="triangle-animal"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-1">
-                    <div class="vertical-line"></div>
-                </div>
+
             </div>
 
-            <div class="col-md-7 nav-info">
-                <div class="content">
-                    <ul>
-                        <li class="row">
-                            <a href="">
-                                <div class="col-md-4">animal</div>
-                                <div class="col-md-4">种类</div>
-                                <div class="col-md-4">以领养</div>
-                            </a>
-                            <a href="">
-                                <div class="col-md-4">animal</div>
-                                <div class="col-md-4">种类</div>
-                                <div class="col-md-4">以领养</div>
-                            </a>
-                            <a href="">
-                                <div class="col-md-4">animal</div>
-                                <div class="col-md-4">种类</div>
-                                <div class="col-md-4">以领养</div>
-                            </a>
-                        </li>
-                    </ul>
+            <div class="col-md-9 nav-info">
+                <ul class="nav nav-tabs row">
+                    <li class="active"><a data-toggle="tab" href="#animals-all">全部</a></li>
+                    <li><a data-toggle="tab" href="#animals-adopter">我领养的</a></li>
+                    <li><a data-toggle="tab" href="#animals-provide">我发布的</a></li>
+                </ul>
+                <div id="myTabContent" class="tab-content row">
+                    <div id="animals-all" class="tab-pane fade in active content">
+                        <ul>
+                            <!--<li class="row">-->
+                                <!--<div class="hidden id">{animalId}</div>-->
+                                <!--<div class="col-md-3"><a href="{animalUrl}">{name}</a></div>-->
+                                <!--<div class="col-md-3">提供者：{provider}</div>-->
+                                <!--<div class="col-md-3">领养人：{adopter}</div>-->
+                                <!--<div class="col-md-3"><button>更新宠物信息</button></div>-->
+                            <!--</li>-->
+                        </ul>
+                    </div>
+                    <div id="animals-provide" class="tab-pane fade in content">
+                        <ul>
+                            <li class="row">
+                                <a href="">
+                                    <div class="col-md-4">animal</div>
+                                    <div class="col-md-4">种类</div>
+                                    <div class="col-md-4">以领养</div>
+                                </a>
+                                <a href="">
+                                    <div class="col-md-4">animal</div>
+                                    <div class="col-md-4">种类</div>
+                                    <div class="col-md-4">以领养</div>
+                                </a>
+                                <a href="">
+                                    <div class="col-md-4">animal</div>
+                                    <div class="col-md-4">种类</div>
+                                    <div class="col-md-4">以领养</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="animals-adopter" class="tab-pane fade in content">
+                        <ul>
+                            <li class="row">
+                                <a href="">
+                                    <div class="col-md-4">animal</div>
+                                    <div class="col-md-4">种类</div>
+                                    <div class="col-md-4">以领养</div>
+                                </a>
+                                <a href="">
+                                    <div class="col-md-4">animal</div>
+                                    <div class="col-md-4">种类</div>
+                                    <div class="col-md-4">以领养</div>
+                                </a>
+                                <a href="">
+                                    <div class="col-md-4">animal</div>
+                                    <div class="col-md-4">种类</div>
+                                    <div class="col-md-4">以领养</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -97,6 +90,7 @@
 <script src="/pet-web/scripts/lib.js"></script>
 <script src="/pet-web/scripts/common.js"></script>
 <script src="/pet-web/scripts/user-nav.js"></script>
+<script src="/pet-web/scripts/user-animals.js"></script>
 <script>
     $(".header").load("/pet-web/page/head.html");
     $("#user-nav").load("user-nav.html");

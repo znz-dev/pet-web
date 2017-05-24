@@ -73,8 +73,12 @@ ol, ul{
     border: 5px solid;
 }
 .animal_info .animal_extend ul{
-    margin: 7px 22px;
+    margin: 7px 40px;
     background-color: #fcf8e3;
+}
+.animal_info .animal_extend ul img{
+    height:50px;
+    width:50px;
 }
 .animal_info .animal_extend #pictures,#dynamic,#message{
     margin: 5px 24px;

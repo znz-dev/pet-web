@@ -17,94 +17,81 @@
     <div class="container-fluid">
         <div class="row">
             <div id="user-nav">
-                <div class="col-md-2 text-center nav-main">
-                    <ul class="nav nav-tabs nav-stacked">
-                        <li class="active" id="my-info"><a data-toggle="tab" href="#info">我的信息</a></li>
-                        <li id="my-focus"><a data-toggle="tab" href="#focus">我的关注</a></li>
-                        <li id="my-message"><a data-toggle="tab" href="#message">我的消息</a></li>
-                        <li id="my-animal"><a data-toggle="tab" href="#animal">我的动物</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-2 text-center nav-follow">
-                    <div class="tab-content">
-                        <div id="info" class="tab-pane fade in active">
-                            <ul class="nav nav-tabs nav-stacked">
-                                <li class="active" id="user-info"><a data-toggle="tab"  href="javascript:void(0)">全部</a></li>
-                                <li><a data-toggle="tab" href="javascript:void(0)">头像</a></li>
-                                <li><a data-toggle="tab" href="javascript:void(0)">账号</a></li>
-                            </ul>
-                            <div class="triangle-info"></div>
-                        </div>
-                        <div id="focus" class="tab-pane">
-                            <ul class="nav nav-tabs nav-stacked">
-                                <li class="active" id="user-focus"><a data-toggle="tab" href="javascript:void(0)">我关注的宠物</a></li>
-                                <li><a data-toggle="tab" href="javascript:void(0)">我关注的人</a></li>
-                                <li><a data-toggle="tab" href="javascript:void(0)">我关注的帖子</a></li>
-                            </ul>
-                            <div class="triangle-focus"></div>
-                        </div>
-                        <div id="message" class="tab-pane">
-                            <ul class="nav nav-tabs nav-stacked">
-                                <li class="active" id="user-message"><a data-toggle="tab" href="javascript:void(0)">全部</a></li>
-                                <li><a data-toggle="tab" href="javascript:void(0)">已查看</a></li>
-                                <li><a data-toggle="tab" href="javascript:void(0)">未查看</a></li>
-                            </ul>
-                            <div class="triangle-message"></div>
-                        </div>
-                        <div id="animal" class="tab-pane">
-                            <ul class="nav nav-tabs nav-stacked">
-                                <li class="active" id="user-animals"><a data-toggle="tab" href="javascript:void(0)">全部</a></li>
-                                <li><a data-toggle="tab" href="javascript:void(0)">我领养的</a></li>
-                                <li><a data-toggle="tab" href="javascript:void(0)">我发布的</a></li>
-                            </ul>
-                            <div class="triangle-animal"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-1">
-                    <div class="vertical-line"></div>
-                </div>
             </div>
 
-            <div class="col-md-7 nav-info">
-                <div class="content">
-                    <ul>
-                        <li class="row">
-                            <div class="col-md-4">user</div>
-                            <div class="col-md-4">message</div>
-                            <div class="col-md-4">time</div>
-                        </li>
-                        <li class="row">
-                            <div class="col-md-4">user</div>
-                            <div class="col-md-4">message</div>
-                            <div class="col-md-4">time</div>
-                        </li>
-                        <li class="row">
-                            <div class="col-md-4">user</div>
-                            <div class="col-md-4">message</div>
-                            <div class="col-md-4">time</div>
-                        </li>
-                        <li class="row">
-                            <div class="col-md-4">user</div>
-                            <div class="col-md-4">message</div>
-                            <div class="col-md-4">time</div>
-                        </li>
-                        <li class="row">
-                            <div class="col-md-4">user</div>
-                            <div class="col-md-4">message</div>
-                            <div class="col-md-4">time</div>
-                        </li>
-                    </ul>
+            <div class="col-md-9 nav-info">
+                <ul class="nav nav-tabs row">
+                    <li class="active"><a data-toggle="tab" href="#message-all">全部</a></li>
+                    <li><a data-toggle="tab" href="#message-all">已查看</a></li>
+                    <li><a data-toggle="tab" href="#message-all">未查看</a></li>
+                </ul>
+                <div id="myTabContent" class="tab-content row">
+                    <div id="message-all" class="tab-pane fade in active content">
+                        <ul>
+                            <li class="row">
+                                <div class="col-md-2"><a href="{animalUrl}">zhou</a></div>
+                                <div class="col-md-6">请问动物猫的详细地址在哪里</div>
+                                <div class="col-md-2">2017-5-1</div>
+                                <div class="col-md-2">
+                                    <div class="hidden id"></div>
+                                    <button>详情</button>
+                                    <div class="hidden fromId"></div>
+                                </div>
+                            </li>
+                            <li class="row">
+                                <div class="hidden fromId"></div>
+                                <div class="col-md-2"><a href="{animalUrl}">liu</a></div>
+                                <div class="col-md-6">请问您一般使用哪种牌子的猫粮</div>
+                                <div class="col-md-2">2017-5-1</div>
+                                <div class="col-md-2"><button>回复</button></div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    <div class="modal fade" id="show-message" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                    <h4 class="modal-title">
+                        消息内容
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <ul>
+                        <li class="hidden"><p id="message-sender_id"></p></li>
+                        <li>标题：<p id="message-title">请问您一般使</p></li>
+                        <li>内容<p id="message-content">请问您一般</p></li>
+                        <li>时间<p id="message-created_at">请问您一般</p></li>
+                        <li>发送者<p id="message-sender">请问您一般</p></li>
+                        <li>接收者<p id="message-receiver">请问您一般</p></li>
+                    </ul>
+                    标题：<input type="text" name="title"><br>
+                    内容：<textarea rows="3" name="content"></textarea><br>
+                    <button type="button" class="btn btn-primary" id="reply-submit">
+                        回复
+                    </button>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                    </button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal -->
+    </div>
 </div>
+
 <div class="footer"></div>
 
 <script src="/pet-web/scripts/lib.js"></script>
 <script src="/pet-web/scripts/common.js"></script>
 <script src="/pet-web/scripts/user-nav.js"></script>
+<script src="/pet-web/scripts/user-message.js"></script>
 <script>
     $(".header").load("/pet-web/page/head.html");
     $("#user-nav").load("user-nav.html");

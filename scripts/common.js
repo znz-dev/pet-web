@@ -34,7 +34,7 @@ function getUrlParam(paras){
     if(typeof(returnValue)=="undefined"){
         return "";
     }else{
-        return returnValue;
+        return decodeURI(returnValue);
     }
 }
 
@@ -50,8 +50,6 @@ $(document).ready(function () {
         $(".header_user .user-on").hide();
         $(".header_user .user-off").show();
     }
-
-
 })
 
 // 选择注销后，清除cookie中用户信息并退回主页
@@ -66,3 +64,15 @@ $(".header_user #log-off").click(function () {
 // $(".header_user #log-off").on("click","p",function(){
 //     alert('2');
 // });
+
+//发送消息
+function createMessage(user_id, receiver_id, title, content) {
+    return(
+        $.ajax({
+            method: "post",
+            url: path.basePath + 'messages.json',
+            data: {user_id:user_id, receiver_id:receiver_id, title:title, content:content},
+            dataType: "json",
+            async: false,
+        }))
+}
